@@ -19,9 +19,18 @@
     </style>
 </head>
 <body>
-    <div class="message">
-        <h1>Site Being Updated</h1>
-        <p>We are currently updating our site. Please check back later.</p>
-    </div>
+    <div id="message-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const messageContainer = document.getElementById("message-container");
+            const messageHTML = `
+                <div class="message">
+                    <h1>Site Being Updated</h1>
+                    <p>We are currently updating our site. Please check back later.</p>
+                </div>
+            `;
+            messageContainer.innerHTML = messageHTML;
+        });
+    </script>
 </body>
 </html>
